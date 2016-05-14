@@ -20,7 +20,7 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
         super.init()
     }
     
-    func refreshTableView() {
+    func refreshTableView(completion : (error : NSError?) -> Void) {
         SongFetchOperation().fetchSongs { (songs, error) in
             if error == nil {
                 self.songs = songs
@@ -28,13 +28,13 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
                     self.songsTable.reloadData()
                 })
             }
+            completion(error: error)
         }
     }
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-            return 100.0
-    }
     
+
+
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

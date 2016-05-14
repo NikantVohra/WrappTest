@@ -18,7 +18,13 @@ class HomeTableViewController: UITableViewController {
             if let dataSource = self.dataSource{
                 self.tableView.dataSource = dataSource
                 tableView.setNeedsLayout()
-                dataSource.refreshTableView()
+                dataSource.refreshTableView({ (error) in
+                    if error != nil {
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.showErrorView()
+                        })
+                    }
+                })
             }
         }
     }
@@ -43,6 +49,13 @@ class HomeTableViewController: UITableViewController {
             destinationVC.song = self.selectedSong
         }
 
+    }
+    
+    private func showErrorView() {
+        let alert = UIAlertController(title: "Unable to fetch data.", message: "Please check your connection.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 }
