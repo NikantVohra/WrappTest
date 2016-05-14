@@ -14,23 +14,27 @@ class SongFetchOperation {
     
     internal func fetchSongs(completionHandler completion : (songs : [Song], error : NSError?) -> Void) {
         loadDataFromURL(NSURL(string: fetchURL)!) { (data, error) in
-            var json: [String: AnyObject]!
-            var songs : [Song] = []
-            do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as? [String: AnyObject]
-                guard let playList = json["playlist"] as? NSDictionary else {return}
-                for playListType in playList.allKeys {
-                    guard let songArray = playList[(playListType as? NSString)!] as? NSArray else {return}
-                    if let currentSongs = Song.from(songArray) {
-                        songs.appendContentsOf(currentSongs)
+            if(error == nil) {
+                var json: [String: AnyObject]!
+                var songs : [Song] = []
+                do {
+                    json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as? [String: AnyObject]
+                    guard let playList = json["playlist"] as? NSDictionary else {return}
+                    for playListType in playList.allKeys {
+                        guard let songArray = playList[(playListType as? NSString)!] as? NSArray else {return}
+                        if let currentSongs = Song.from(songArray) {
+                            songs.appendContentsOf(currentSongs)
+                        }
                     }
+                    completion(songs: songs, error: nil)
+                    
+                } catch {
+                    print(error)
                 }
-                completion(songs: songs, error: nil)
-                
-            } catch {
-                print(error)
             }
-
+            else {
+                completion(songs: [], error: error)
+            }
         }
     }
     

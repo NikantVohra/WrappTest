@@ -11,6 +11,7 @@ import UIKit
 class HomeTableViewController: UITableViewController {
 
     var selectedSong : Song?
+    let songDetailSegueIdentifier = "songDetailSegue"
     
     var dataSource: HomeScreenDataSource?{
         didSet{
@@ -33,11 +34,11 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedSong = self.dataSource?.songs[indexPath.row]
-        self.performSegueWithIdentifier("songDetailSegue", sender: self)
+        self.performSegueWithIdentifier(songDetailSegueIdentifier, sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "songDetailSegue") {
+        if (segue.identifier == songDetailSegueIdentifier) {
             let destinationVC:SongDetailViewController = segue.destinationViewController as! SongDetailViewController
             destinationVC.song = self.selectedSong
         }
