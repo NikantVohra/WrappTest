@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SongTableViewCell: UITableViewCell {
     
     
@@ -19,6 +20,7 @@ class SongTableViewCell: UITableViewCell {
     func configureCell(song : Song) {
         songTitleLabel.text = song.title
         artistNameLabel.text = song.artist
+        songImageView?.kf_setImageWithURL(NSURL(string:song.imageURL)!, placeholderImage: UIImage(named: "placeholder"))
     }
     
 }

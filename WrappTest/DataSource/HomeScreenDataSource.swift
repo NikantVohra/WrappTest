@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import Kingfisher
+
 class HomeScreenDataSource: NSObject, UITableViewDataSource {
 
     // MARK: - Table view data source
@@ -33,9 +33,6 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
     }
     
     
-
-
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -48,7 +45,6 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("SongCell", forIndexPath: indexPath) as! SongTableViewCell
         let song = songs[indexPath.row]
         cell.configureCell(song)
-        cell.songImageView?.kf_setImageWithURL(NSURL(string: song.imageURL)!, placeholderImage: UIImage(named: "placeholder"))
         return cell
     }
 }
