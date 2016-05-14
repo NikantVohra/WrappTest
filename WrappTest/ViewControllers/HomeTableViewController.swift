@@ -10,10 +10,8 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.dataSource = HomeScreenDataSource(songsTable: self.tableView)
-    }
+    var selectedSong : Song?
+    
     var dataSource: HomeScreenDataSource?{
         didSet{
             if let dataSource = self.dataSource{
@@ -23,11 +21,27 @@ class HomeTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.dataSource = HomeScreenDataSource(songsTable: self.tableView)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedSong = self.dataSource?.songs[indexPath.row]
+        self.performSegueWithIdentifier("songDetailSegue", sender: self)
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "songDetailSegue") {
+            let destinationVC:SongDetailViewController = segue.destinationViewController as! SongDetailViewController
+            destinationVC.song = self.selectedSong
+        }
 
+    }
 
 }

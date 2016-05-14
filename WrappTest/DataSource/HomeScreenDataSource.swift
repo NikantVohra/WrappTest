@@ -31,9 +31,15 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            return 100.0
+    }
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -42,7 +48,7 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("SongCell", forIndexPath: indexPath) as! SongTableViewCell
         let song = songs[indexPath.row]
         cell.configureCell(song)
-        cell.imageView?.kf_setImageWithURL(NSURL(string: song.imageURL)!)
+        cell.imageView?.kf_setImageWithURL(NSURL(string: song.imageURL)!, placeholderImage: UIImage(named: "placeholder"))
         return cell
     }
 }
