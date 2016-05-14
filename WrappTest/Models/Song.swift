@@ -19,7 +19,7 @@ struct Song : Mappable{
     init(map: Mapper) throws {
         try title = map.from("title")
         try artist = map.from("artist")
-        try imageURL = map.from("imageURL")
+        try imageURL = map.from("image")
         label = map.optionalFrom("label")
         
     }

@@ -12,22 +12,21 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.dataSource = HomeScreenDataSource(songsTable: self.tableView)
     }
-
+    var dataSource: HomeScreenDataSource?{
+        didSet{
+            if let dataSource = self.dataSource{
+                self.tableView.dataSource = dataSource
+                tableView.setNeedsLayout()
+                dataSource.refreshTableView()
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
     
 
 
