@@ -1,0 +1,13 @@
+PODS:
+  - Kingfisher (2.4.1)
+  - ModelMapper (2.1.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 2.4)
+  - ModelMapper
+
+SPEC CHECKSUMS:
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
+  ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
+
+COCOAPODS: 0.39.0

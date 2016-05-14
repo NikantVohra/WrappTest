@@ -29,8 +29,6 @@ class HomeTableViewController: UITableViewController {
         return 0
     }
     
-    
-
 
 
 }
