@@ -10,7 +10,7 @@ import Foundation
 import Mapper
 
 
-struct Song : Mappable{
+struct Song : Mappable, Comparable{
     let title : String
     let artist : String
     let label : String?
@@ -24,4 +24,12 @@ struct Song : Mappable{
         
     }
     
+}
+
+func < (lhs: Song, rhs: Song) -> Bool {
+    return lhs.title < rhs.title
+}
+
+func == (lhs: Song, rhs: Song) -> Bool {
+    return lhs.title == rhs.title
 }

@@ -23,7 +23,7 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
     func refreshTableView(completion : (error : NSError?) -> Void) {
         SongFetchOperation().fetchSongs { (songs, error) in
             if error == nil {
-                self.songs = songs
+                self.songs = songs.sort()
                 dispatch_async(dispatch_get_main_queue(), {
                     self.songsTable.reloadData()
                 })

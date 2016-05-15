@@ -91,7 +91,7 @@
         <!--Song Detail View Controller-->
         <scene sceneID="VRl-kd-ax4">
             <objects>
-                <viewController id="l31-oG-eyv" customClass="SongDetailViewController" customModule="WrappTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongDetailViewController" id="l31-oG-eyv" customClass="SongDetailViewController" customModule="WrappTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fru-9s-ddm"/>
                         <viewControllerLayoutGuide type="bottom" id="kBz-Cq-fWS"/>
