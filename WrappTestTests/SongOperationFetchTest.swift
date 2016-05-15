@@ -11,7 +11,7 @@ import XCTest
 
 class SongOperationFetchTest: XCTestCase {
 
-    let songFetchCount = 47
+    let songFetchCount = 15
     
     override func setUp() {
         super.setUp()

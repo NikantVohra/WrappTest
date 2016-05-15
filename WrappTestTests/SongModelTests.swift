@@ -33,7 +33,6 @@ class SongModelTests: XCTestCase {
             XCTAssertEqual(song.title, "Hold Up")
             XCTAssertEqual(song.imageURL, "http://ichef.live.bbci.co.uk/images/ic/512x512/p03s2dd7.jpg")
 
- 
         }
         catch {
             

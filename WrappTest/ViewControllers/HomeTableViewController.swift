@@ -13,6 +13,9 @@ class HomeTableViewController: UITableViewController {
     var selectedSong : Song?
     let songDetailSegueIdentifier = "songDetailSegue"
     
+    let searchController = UISearchController(searchResultsController: nil)
+
+    
     var dataSource: HomeScreenDataSource? {
         didSet{
             if let dataSource = self.dataSource {
@@ -31,7 +34,12 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = HomeScreenDataSource(songsTable: self.tableView)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        self.dataSource = HomeScreenDataSource(songsTable: self.tableView, searchController: searchController)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +47,12 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedSong = self.dataSource?.songs[indexPath.row]
+        if searchController.active && searchController.searchBar.text != "" {
+            self.selectedSong = self.dataSource?.filteredSongs[indexPath.row]
+        }
+        else {
+            self.selectedSong = self.dataSource?.songs[indexPath.row]
+        }
         self.performSegueWithIdentifier(songDetailSegueIdentifier, sender: self)
     }
     
@@ -58,4 +71,10 @@ class HomeTableViewController: UITableViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
+}
+
+extension HomeTableViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        dataSource!.filterContentForSearchText(searchController.searchBar.text!)
+    }
 }

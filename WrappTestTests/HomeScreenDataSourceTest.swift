@@ -12,7 +12,7 @@ import XCTest
 
 class HomeScreenDataSourceTest: XCTestCase {
 
-    var songFetchCount = 47
+    var songFetchCount = 15
 
     var dataSource : HomeScreenDataSource?
     override func setUp() {
@@ -27,7 +27,7 @@ class HomeScreenDataSourceTest: XCTestCase {
         // The One Weird Trick!
         let _ = navigationController.view
         let _ = vc!.view
-        dataSource = HomeScreenDataSource(songsTable: (vc?.tableView)!)
+        dataSource = vc?.dataSource
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

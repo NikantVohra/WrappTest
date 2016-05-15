@@ -13,7 +13,7 @@ import Mapper
 class HomeTableViewControllerTests: XCTestCase {
     
     var vc : HomeTableViewController?
-    var songFetchCount = 47
+    var songFetchCount = 15
 
     override func setUp() {
         super.setUp()
@@ -28,7 +28,6 @@ class HomeTableViewControllerTests: XCTestCase {
         // The One Weird Trick!
         let _ = navigationController.view
         let _ = vc!.view
-        vc?.dataSource = HomeScreenDataSource(songsTable: (vc?.tableView)!)
     }
     
     override func tearDown() {
