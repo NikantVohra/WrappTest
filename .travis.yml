@@ -6,5 +6,5 @@ before_install:
   - sudo gem install xcpretty
 
 script:
- - xcodebuild -project WrappTest.xcworspace -scheme  WrappTest -sdk iphonesimulator9.3 build test  | xcpretty -c && exit ${PIPESTATUS[0]}
+ - xcodebuild -project WrappTest.xcworkspace -scheme  WrappTest -sdk iphonesimulator9.3 build test  | xcpretty -c && exit ${PIPESTATUS[0]}
 
