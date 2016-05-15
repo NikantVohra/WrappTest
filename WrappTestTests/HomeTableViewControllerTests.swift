@@ -13,7 +13,6 @@ import Mapper
 class HomeTableViewControllerTests: XCTestCase {
     
     var vc : HomeTableViewController?
-    var songFetchCount = 47
 
     override func setUp() {
         super.setUp()
@@ -45,11 +44,11 @@ class HomeTableViewControllerTests: XCTestCase {
                 datasourceRefreshExpectation.fulfill()
             }
             else {
-                self.songFetchCount = 0
+                GlobalVariables.songFetchCount = 0
             }
         })
         self.waitForExpectationsWithTimeout(5) { (error) in
-            XCTAssertEqual(tableViewRows, self.songFetchCount)
+            XCTAssertEqual(tableViewRows, GlobalVariables.songFetchCount)
         }
 
     }

@@ -9,9 +9,8 @@
 import XCTest
 @testable import WrappTest
 
-class SongOperationFetchTest: XCTestCase {
+class ASongOperationFetchTest: XCTestCase {
 
-    let songFetchCount = 47
     
     override func setUp() {
         super.setUp()
@@ -28,11 +27,17 @@ class SongOperationFetchTest: XCTestCase {
         let songFetchExpectation = expectationWithDescription("songFetchExpectation")
         var testSongs : [Song] = []
         SongFetchOperation().fetchSongs { (songs, error) in
-            testSongs = songs
-            songFetchExpectation.fulfill()
+            if error == nil {
+                testSongs = songs
+                GlobalVariables.songFetchCount = songs.count
+                songFetchExpectation.fulfill()
+            }
+            else {
+                GlobalVariables.songFetchCount = 0
+            }
         }
         self.waitForExpectationsWithTimeout(5) { (error) in
-            XCTAssertEqual(testSongs.count, self.songFetchCount)
+            XCTAssertEqual(testSongs.count, GlobalVariables.songFetchCount)
         }
     }
 

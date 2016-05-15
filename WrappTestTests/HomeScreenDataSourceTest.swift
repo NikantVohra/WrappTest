@@ -12,7 +12,6 @@ import XCTest
 
 class HomeScreenDataSourceTest: XCTestCase {
 
-    var songFetchCount = 47
 
     var dataSource : HomeScreenDataSource?
     override func setUp() {
@@ -46,11 +45,11 @@ class HomeScreenDataSourceTest: XCTestCase {
                 datasourceRefreshExpectation.fulfill()
             }
             else {
-                self.songFetchCount = 0
+                GlobalVariables.songFetchCount = 0
             }
         })
         self.waitForExpectationsWithTimeout(10) { (error) in
-            XCTAssertEqual(tableViewRows, self.songFetchCount)
+            XCTAssertEqual(tableViewRows, GlobalVariables.songFetchCount)
         }
 
     }

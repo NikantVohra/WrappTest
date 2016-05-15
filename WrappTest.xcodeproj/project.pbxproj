@@ -12,10 +12,11 @@
 		0505DF111CE7535B00DBD5A5 /* SongFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF101CE7535B00DBD5A5 /* SongFetchOperation.swift */; };
 		0505DF131CE7613F00DBD5A5 /* HomeScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF121CE7613F00DBD5A5 /* HomeScreenDataSource.swift */; };
 		0505DF151CE7949C00DBD5A5 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF141CE7949C00DBD5A5 /* SongDetailViewController.swift */; };
-		0505DF171CE7A7D500DBD5A5 /* SongOperationFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */; };
+		0505DF171CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */; };
 		0505DF191CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */; };
 		0505DF1B1CE7AE3600DBD5A5 /* SongModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */; };
 		0505DF1D1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */; };
+		0505DF211CE8B4A000DBD5A5 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */; };
 		0579A9DC1CE7433800763189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579A9DB1CE7433800763189 /* AppDelegate.swift */; };
 		0579A9E11CE7433800763189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0579A9DF1CE7433800763189 /* Main.storyboard */; };
 		0579A9E31CE7433800763189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0579A9E21CE7433800763189 /* Assets.xcassets */; };
@@ -50,10 +51,11 @@
 		0505DF101CE7535B00DBD5A5 /* SongFetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongFetchOperation.swift; sourceTree = "<group>"; };
 		0505DF121CE7613F00DBD5A5 /* HomeScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSource.swift; sourceTree = "<group>"; };
 		0505DF141CE7949C00DBD5A5 /* SongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
-		0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongOperationFetchTest.swift; sourceTree = "<group>"; };
+		0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASongOperationFetchTest.swift; sourceTree = "<group>"; };
 		0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSourceTest.swift; sourceTree = "<group>"; };
 		0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModelTests.swift; sourceTree = "<group>"; };
 		0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewControllerTests.swift; sourceTree = "<group>"; };
+		0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		0579A9D81CE7433700763189 /* WrappTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrappTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0579A9DB1CE7433800763189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0579A9E01CE7433800763189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,10 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				0579A9F01CE7433800763189 /* WrappTestTests.swift */,
-				0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */,
+				0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */,
 				0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */,
 				0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */,
 				0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */,
+				0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */,
 				0579A9F21CE7433800763189 /* Info.plist */,
 			);
 			path = WrappTestTests;
@@ -412,9 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0505DF211CE8B4A000DBD5A5 /* GlobalVariables.swift in Sources */,
 				0579A9F11CE7433800763189 /* WrappTestTests.swift in Sources */,
 				0505DF1D1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift in Sources */,
-				0505DF171CE7A7D500DBD5A5 /* SongOperationFetchTest.swift in Sources */,
+				0505DF171CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift in Sources */,
 				0505DF1B1CE7AE3600DBD5A5 /* SongModelTests.swift in Sources */,
 				0505DF191CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift in Sources */,
 			);
