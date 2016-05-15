@@ -13,7 +13,8 @@ import Mapper
 class HomeTableViewControllerTests: XCTestCase {
     
     var vc : HomeTableViewController?
-    
+    let songFetchCount = 47
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -43,7 +44,7 @@ class HomeTableViewControllerTests: XCTestCase {
             datasourceRefreshExpectation.fulfill()
         })
         self.waitForExpectationsWithTimeout(5) { (error) in
-            XCTAssertEqual(tableViewRows, 47)
+            XCTAssertEqual(tableViewRows, self.songFetchCount)
         }
 
     }
