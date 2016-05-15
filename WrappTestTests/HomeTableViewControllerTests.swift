@@ -36,13 +36,13 @@ class HomeTableViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func DISABLED_testHomeTableViewController() {
+    func testHomeTableViewController() {
         let datasourceRefreshExpectation = expectationWithDescription("datasourceRefreshExpectation")
         var tableViewRows = 0
         vc?.dataSource?.refreshTableView({ (error) in
             if(error == nil) {
                 self.vc?.tableView.reloadData()
-                tableViewRows = (self.vc?.tableView.numberOfRowsInSection(0))!
+                tableViewRows = (self.vc?.dataSource?.songs.count)!
                 datasourceRefreshExpectation.fulfill()
             }
             else {
