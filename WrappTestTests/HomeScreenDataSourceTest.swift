@@ -17,8 +17,17 @@ class HomeScreenDataSourceTest: XCTestCase {
     var dataSource : HomeScreenDataSource?
     override func setUp() {
         super.setUp()
-        let homeViewController = HomeTableViewController()
-        dataSource = HomeScreenDataSource(songsTable: homeViewController.tableView)
+        let storyboard = UIStoryboard(name: "Main",
+                                      bundle: NSBundle.mainBundle())
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let vc = navigationController.topViewController as? HomeTableViewController
+        
+        UIApplication.sharedApplication().keyWindow!.rootViewController = vc
+        
+        // The One Weird Trick!
+        let _ = navigationController.view
+        let _ = vc!.view
+        dataSource = HomeScreenDataSource(songsTable: (vc?.tableView)!)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -34,7 +43,7 @@ class HomeScreenDataSourceTest: XCTestCase {
             tableViewRows = (self.dataSource?.songsTable.numberOfRowsInSection(0))!
             datasourceRefreshExpectation.fulfill()
         })
-        self.waitForExpectationsWithTimeout(5) { (error) in
+        self.waitForExpectationsWithTimeout(10) { (error) in
             XCTAssertEqual(tableViewRows, self.songFetchCount)
         }
 
