@@ -13,9 +13,9 @@ class HomeTableViewController: UITableViewController {
     var selectedSong : Song?
     let songDetailSegueIdentifier = "songDetailSegue"
     
-    var dataSource: HomeScreenDataSource?{
+    var dataSource: HomeScreenDataSource? {
         didSet{
-            if let dataSource = self.dataSource{
+            if let dataSource = self.dataSource {
                 self.tableView.dataSource = dataSource
                 tableView.setNeedsLayout()
                 dataSource.refreshTableView({ (error) in

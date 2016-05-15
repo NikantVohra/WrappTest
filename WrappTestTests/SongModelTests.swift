@@ -21,6 +21,8 @@ class SongModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    
 
     func testSongModel() {
         let songDict = ["title":"Hold Up", "artist":"Beyonce", "image":"http://ichef.live.bbci.co.uk/images/ic/512x512/p03s2dd7.jpg"]
@@ -37,5 +39,22 @@ class SongModelTests: XCTestCase {
             
         }
         
+    }
+    
+    func testSongConformanceToConmparableProtocol() {
+        let firstSongDict = ["title":"Hold Up", "artist":"Beyonce", "image":"http://ichef.live.bbci.co.uk/images/ic/512x512/p03s2dd7.jpg"]
+        let secondSongDict = ["title":"Up&Up", "artist":"Coldplay", "image":"http://ichef.live.bbci.co.uk/images/ic/512x512/p03sh5tm.jpg"]
+        do {
+            let firstSong = try Song(map : Mapper(JSON: firstSongDict))
+            let secondSong = try Song(map : Mapper(JSON: secondSongDict))
+            let playList = [secondSong, firstSong]
+            XCTAssertEqual(playList.sort()[0].title, "Hold Up")
+            
+        }
+        catch {
+            
+        }
+
+
     }
 }

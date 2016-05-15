@@ -10,7 +10,7 @@ import Foundation
 import Mapper
 
 
-struct Song : Mappable, Comparable{
+struct Song : Mappable, Comparable {
     let title : String
     let artist : String
     let label : String?
@@ -21,7 +21,6 @@ struct Song : Mappable, Comparable{
         try artist = map.from("artist")
         try imageURL = map.from("image")
         label = map.optionalFrom("label")
-        
     }
     
 }
