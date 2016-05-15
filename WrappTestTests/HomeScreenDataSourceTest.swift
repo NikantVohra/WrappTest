@@ -12,7 +12,7 @@ import XCTest
 
 class HomeScreenDataSourceTest: XCTestCase {
 
-    var songFetchCount = 15
+    var songFetchCount = 47
 
     var dataSource : HomeScreenDataSource?
     override func setUp() {

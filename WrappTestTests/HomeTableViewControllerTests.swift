@@ -13,7 +13,7 @@ import Mapper
 class HomeTableViewControllerTests: XCTestCase {
     
     var vc : HomeTableViewController?
-    var songFetchCount = 15
+    var songFetchCount = 47
 
     override func setUp() {
         super.setUp()

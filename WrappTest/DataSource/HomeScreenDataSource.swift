@@ -61,11 +61,10 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
+    func filterContentForSearchText(searchText: String) {
         filteredSongs = songs.filter { song in
             return song.title.lowercaseString.containsString(searchText.lowercaseString)
         }
-        
         self.songsTable.reloadData()
     }
 }
