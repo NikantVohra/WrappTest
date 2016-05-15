@@ -1,7 +1,7 @@
-# WrappTest
-The repository contains a simple application showcasing download of images and displaying them in a table view
 [![Build Status](https://travis-ci.org/NikantVohra/WrappTest.svg)](https://travis-ci.org/NikantVohra/WrappTest)
 
+# WrappTest
+The repository contains a simple application showcasing download of images and displaying them in a table view
 
 # Instructions for Testing the app
 1. Open the WrappTest.xcworkspace in Xcode.
