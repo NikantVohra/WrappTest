@@ -23,7 +23,7 @@ final class Song : NSObject, Mappable, Comparable {
     let label : String?
     let imageURL : String
     
-    //Mapper initializer that allows direct conversion of Json Dictionary to Song struct
+    //Mapper initializer that allows direct conversion of Json Dictionary to Song class
     required init(map: Mapper) throws {
         try title = map.from(PropertyKey.titleKey)
         try artist = map.from(PropertyKey.artistKey)
@@ -49,7 +49,7 @@ final class Song : NSObject, Mappable, Comparable {
 
 }
 
-//Comparable protocol methods for Song Struct
+//Comparable protocol methods for Song class
 func < (lhs: Song, rhs: Song) -> Bool {
     return lhs.title < rhs.title
 }
