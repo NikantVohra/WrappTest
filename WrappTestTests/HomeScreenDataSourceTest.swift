@@ -16,8 +16,16 @@ class HomeScreenDataSourceTest: XCTestCase {
     var dataSource : HomeScreenDataSource?
     override func setUp() {
         super.setUp()
-        let vc = HomeTableViewController()
-        dataSource = HomeScreenDataSource(songsTable: vc.tableView, searchController: vc.searchController)
+        let storyboard = UIStoryboard(name: "Main",
+                                      bundle: NSBundle.mainBundle())
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let vc = navigationController.topViewController as? HomeTableViewController
+        
+        UIApplication.sharedApplication().keyWindow!.rootViewController = vc
+        
+        let _ = navigationController.view
+        let _ = vc!.view
+        dataSource = vc?.dataSource
     }
     
     override func tearDown() {
