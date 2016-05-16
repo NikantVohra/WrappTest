@@ -26,6 +26,7 @@ class SongFetchOperation {
                             songs.appendContentsOf(currentSongs)
                         }
                     }
+                    SharedStorage.sharedInstance.saveSongs(songs.sort())
                     completion(songs: songs, error: nil)
                     
                 } catch {

@@ -27,7 +27,12 @@ class HomeScreenDataSource: NSObject, UITableViewDataSource {
     func refreshTableView(completion : (error : NSError?) -> Void) {
         SongFetchOperation().fetchSongs { (songs, error) in
             if error == nil {
-                self.songs = songs.sort()
+                if let savedSongs = SharedStorage.sharedInstance.getSavedSongs() {
+                    self.songs = savedSongs
+                }
+                else {
+                    self.songs = songs
+                }
                 dispatch_async(dispatch_get_main_queue(), {
                     self.songsTable.reloadData()
                 })

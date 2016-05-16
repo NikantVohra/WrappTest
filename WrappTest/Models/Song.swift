@@ -31,7 +31,7 @@ final class Song : NSObject, Mappable, Comparable {
         label = map.optionalFrom(PropertyKey.labelKey)
         
     }
-    
+
     func encodeWithCoder(aCoder: NSCoder!) {
         aCoder.encodeObject(title, forKey: PropertyKey.titleKey)
         aCoder.encodeObject(artist, forKey: PropertyKey.artistKey)
