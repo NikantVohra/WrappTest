@@ -10,6 +10,13 @@ import Foundation
 import Mapper
 
 
+struct PropertyKey {
+    static let titleKey = "title"
+    static let artistKey = "artist"
+    static let imageURLKey = "image"
+    static let labelKey = "label"
+}
+
 struct Song : Mappable, Comparable {
     let title : String
     let artist : String
@@ -18,10 +25,10 @@ struct Song : Mappable, Comparable {
     
     //Mapper initializer that allows direct conversion of Json Dictionary to Song struct
     init(map: Mapper) throws {
-        try title = map.from("title")
-        try artist = map.from("artist")
-        try imageURL = map.from("image")
-        label = map.optionalFrom("label")
+        try title = map.from(PropertyKey.titleKey)
+        try artist = map.from(PropertyKey.artistKey)
+        try imageURL = map.from(PropertyKey.imageURLKey)
+        label = map.optionalFrom(PropertyKey.labelKey)
     }
     
 }
