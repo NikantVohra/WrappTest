@@ -18,11 +18,9 @@ class HomeScreenDataSourceTest: XCTestCase {
         super.setUp()
         let vc = HomeTableViewController()
         dataSource = HomeScreenDataSource(songsTable: vc.tableView, searchController: vc.searchController)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 

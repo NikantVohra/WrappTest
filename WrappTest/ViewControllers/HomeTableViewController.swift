@@ -15,7 +15,6 @@ class HomeTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
 
-    
     var dataSource: HomeScreenDataSource? {
         didSet{
             if let dataSource = self.dataSource {

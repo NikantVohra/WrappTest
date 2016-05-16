@@ -14,17 +14,15 @@ class SongModelTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     
 
-    func testSongModel() {
+    func testSongModelMapperInitializer() {
         let songDict = ["title":"Hold Up", "artist":"Beyonce", "image":"http://ichef.live.bbci.co.uk/images/ic/512x512/p03s2dd7.jpg"]
         do {
             let song = try Song(map: Mapper(JSON: songDict))
