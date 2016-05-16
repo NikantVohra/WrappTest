@@ -27,6 +27,7 @@ class ASongOperationFetchTest: XCTestCase {
             if error == nil {
                 testSongs = songs
                 GlobalVariables.songFetchCount = songs.count
+                SharedStorage.sharedInstance.saveSongs(songs)
                 songFetchExpectation.fulfill()
             }
             else {
