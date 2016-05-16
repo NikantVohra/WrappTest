@@ -12,15 +12,17 @@
 		0505DF111CE7535B00DBD5A5 /* SongFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF101CE7535B00DBD5A5 /* SongFetchOperation.swift */; };
 		0505DF131CE7613F00DBD5A5 /* HomeScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF121CE7613F00DBD5A5 /* HomeScreenDataSource.swift */; };
 		0505DF151CE7949C00DBD5A5 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF141CE7949C00DBD5A5 /* SongDetailViewController.swift */; };
-		0505DF171CE7A7D500DBD5A5 /* SongOperationFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */; };
+		0505DF171CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */; };
 		0505DF191CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */; };
 		0505DF1B1CE7AE3600DBD5A5 /* SongModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */; };
 		0505DF1D1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */; };
+		0505DF211CE8B4A000DBD5A5 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */; };
+		0505DF231CE97DC500DBD5A5 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF221CE97DC500DBD5A5 /* SharedStorage.swift */; };
+		0505DF251CE97FC600DBD5A5 /* SharedStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DF241CE97FC600DBD5A5 /* SharedStorageTests.swift */; };
 		0579A9DC1CE7433800763189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579A9DB1CE7433800763189 /* AppDelegate.swift */; };
 		0579A9E11CE7433800763189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0579A9DF1CE7433800763189 /* Main.storyboard */; };
 		0579A9E31CE7433800763189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0579A9E21CE7433800763189 /* Assets.xcassets */; };
 		0579A9E61CE7433800763189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0579A9E41CE7433800763189 /* LaunchScreen.storyboard */; };
-		0579A9F11CE7433800763189 /* WrappTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579A9F01CE7433800763189 /* WrappTestTests.swift */; };
 		0579A9FC1CE7433800763189 /* WrappTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579A9FB1CE7433800763189 /* WrappTestUITests.swift */; };
 		0579AA101CE74A2B00763189 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579AA0F1CE74A2B00763189 /* HomeTableViewController.swift */; };
 		3F26E174CE10E989609AD706 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE878592BF9B090843155EC /* Pods.framework */; };
@@ -50,10 +52,13 @@
 		0505DF101CE7535B00DBD5A5 /* SongFetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongFetchOperation.swift; sourceTree = "<group>"; };
 		0505DF121CE7613F00DBD5A5 /* HomeScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSource.swift; sourceTree = "<group>"; };
 		0505DF141CE7949C00DBD5A5 /* SongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
-		0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongOperationFetchTest.swift; sourceTree = "<group>"; };
+		0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASongOperationFetchTest.swift; sourceTree = "<group>"; };
 		0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSourceTest.swift; sourceTree = "<group>"; };
 		0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModelTests.swift; sourceTree = "<group>"; };
 		0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewControllerTests.swift; sourceTree = "<group>"; };
+		0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		0505DF221CE97DC500DBD5A5 /* SharedStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedStorage.swift; sourceTree = "<group>"; };
+		0505DF241CE97FC600DBD5A5 /* SharedStorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedStorageTests.swift; sourceTree = "<group>"; };
 		0579A9D81CE7433700763189 /* WrappTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrappTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0579A9DB1CE7433800763189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0579A9E01CE7433800763189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +66,6 @@
 		0579A9E51CE7433800763189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0579A9E71CE7433800763189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0579A9EC1CE7433800763189 /* WrappTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WrappTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0579A9F01CE7433800763189 /* WrappTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappTestTests.swift; sourceTree = "<group>"; };
 		0579A9F21CE7433800763189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0579A9F71CE7433800763189 /* WrappTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WrappTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0579A9FB1CE7433800763189 /* WrappTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappTestUITests.swift; sourceTree = "<group>"; };
@@ -155,11 +159,12 @@
 		0579A9EF1CE7433800763189 /* WrappTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				0579A9F01CE7433800763189 /* WrappTestTests.swift */,
-				0505DF161CE7A7D500DBD5A5 /* SongOperationFetchTest.swift */,
+				0505DF161CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift */,
 				0505DF181CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift */,
+				0505DF241CE97FC600DBD5A5 /* SharedStorageTests.swift */,
 				0505DF1C1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift */,
 				0505DF1A1CE7AE3600DBD5A5 /* SongModelTests.swift */,
+				0505DF201CE8B4A000DBD5A5 /* GlobalVariables.swift */,
 				0579A9F21CE7433800763189 /* Info.plist */,
 			);
 			path = WrappTestTests;
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				0505DF0A1CE74C9300DBD5A5 /* Song.swift */,
+				0505DF221CE97DC500DBD5A5 /* SharedStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 			files = (
 				0505DF111CE7535B00DBD5A5 /* SongFetchOperation.swift in Sources */,
 				0505DF131CE7613F00DBD5A5 /* HomeScreenDataSource.swift in Sources */,
+				0505DF231CE97DC500DBD5A5 /* SharedStorage.swift in Sources */,
 				0505DF0D1CE7514900DBD5A5 /* SongTableViewCell.swift in Sources */,
 				0505DF0B1CE74C9300DBD5A5 /* Song.swift in Sources */,
 				0505DF151CE7949C00DBD5A5 /* SongDetailViewController.swift in Sources */,
@@ -412,10 +419,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0579A9F11CE7433800763189 /* WrappTestTests.swift in Sources */,
+				0505DF211CE8B4A000DBD5A5 /* GlobalVariables.swift in Sources */,
 				0505DF1D1CE82F7E00DBD5A5 /* HomeTableViewControllerTests.swift in Sources */,
-				0505DF171CE7A7D500DBD5A5 /* SongOperationFetchTest.swift in Sources */,
+				0505DF171CE7A7D500DBD5A5 /* ASongOperationFetchTest.swift in Sources */,
 				0505DF1B1CE7AE3600DBD5A5 /* SongModelTests.swift in Sources */,
+				0505DF251CE97FC600DBD5A5 /* SharedStorageTests.swift in Sources */,
 				0505DF191CE7AB9C00DBD5A5 /* HomeScreenDataSourceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,6 @@ import XCTest
 
 class HomeScreenDataSourceTest: XCTestCase {
 
-    var songFetchCount = 47
 
     var dataSource : HomeScreenDataSource?
     override func setUp() {
@@ -24,15 +23,12 @@ class HomeScreenDataSourceTest: XCTestCase {
         
         UIApplication.sharedApplication().keyWindow!.rootViewController = vc
         
-        // The One Weird Trick!
         let _ = navigationController.view
         let _ = vc!.view
-        dataSource = HomeScreenDataSource(songsTable: (vc?.tableView)!)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        dataSource = vc?.dataSource
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
@@ -41,16 +37,15 @@ class HomeScreenDataSourceTest: XCTestCase {
         var tableViewRows = 0
         dataSource?.refreshTableView({ (error) in
             if(error == nil) {
-                self.dataSource?.songsTable.reloadData()
                 tableViewRows = (self.dataSource?.songs.count)!
                 datasourceRefreshExpectation.fulfill()
             }
             else {
-                self.songFetchCount = 0
+                GlobalVariables.songFetchCount = 0
             }
         })
         self.waitForExpectationsWithTimeout(10) { (error) in
-            XCTAssertEqual(tableViewRows, self.songFetchCount)
+            XCTAssertEqual(tableViewRows, GlobalVariables.songFetchCount)
         }
 
     }
